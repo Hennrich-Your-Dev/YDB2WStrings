@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9260AF2B26F3DC6200C31F96 /* YDB2WStrings.h in Headers */ = {isa = PBXBuildFile; fileRef = 9260AF2926F3DC6200C31F96 /* YDB2WStrings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9260AF3226F3DE5300C31F96 /* YDB2WStrings.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 9260AF3126F3DE5300C31F96 /* YDB2WStrings.xcworkspace */; };
+		9260AF3726F3E12600C31F96 /* YDString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260AF3626F3E12600C31F96 /* YDString.swift */; };
 		FF3EE01CF55083F4D28146E3 /* Pods_YDB2WStrings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B3E872995EA7AD977AC52C /* Pods_YDB2WStrings.framework */; };
 /* End PBXBuildFile section */
 
@@ -18,6 +19,7 @@
 		9260AF2926F3DC6200C31F96 /* YDB2WStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YDB2WStrings.h; sourceTree = "<group>"; };
 		9260AF2A26F3DC6200C31F96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9260AF3126F3DE5300C31F96 /* YDB2WStrings.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = YDB2WStrings.xcworkspace; sourceTree = "<group>"; };
+		9260AF3626F3E12600C31F96 /* YDString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDString.swift; sourceTree = "<group>"; };
 		B3C682A8609984357913C152 /* Pods-YDB2WStrings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDB2WStrings.debug.xcconfig"; path = "Target Support Files/Pods-YDB2WStrings/Pods-YDB2WStrings.debug.xcconfig"; sourceTree = "<group>"; };
 		F8B3E872995EA7AD977AC52C /* Pods_YDB2WStrings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YDB2WStrings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -73,10 +75,19 @@
 		9260AF2826F3DC6200C31F96 /* YDB2WStrings */ = {
 			isa = PBXGroup;
 			children = (
+				9260AF3526F3E10600C31F96 /* Model */,
 				9260AF2926F3DC6200C31F96 /* YDB2WStrings.h */,
 				9260AF2A26F3DC6200C31F96 /* Info.plist */,
 			);
 			path = YDB2WStrings;
+			sourceTree = "<group>";
+		};
+		9260AF3526F3E10600C31F96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9260AF3626F3E12600C31F96 /* YDString.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +133,7 @@
 				TargetAttributes = {
 					9260AF2526F3DC6200C31F96 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -184,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9260AF3726F3E12600C31F96 /* YDString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +329,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B3C682A8609984357913C152 /* Pods-YDB2WStrings.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -332,6 +346,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.yourdev.YDB2WStrings;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -341,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5C9BB0484922224426CEE5DC /* Pods-YDB2WStrings.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

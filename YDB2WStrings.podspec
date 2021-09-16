@@ -22,4 +22,5 @@ Pod::Spec.new do |spec|
   spec.swift_version    = "5.0"
   
   spec.dependency "YDB2WBrandManager", "~> 1.5.0"
+  spec.dependency "YDB2WModels", "~> 1.5.0"
 end
